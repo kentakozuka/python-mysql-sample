@@ -1,20 +1,27 @@
-###Read as bellow
 ###source ceate_tables.sql
 
-#database
-###この辺動作確認していないので、試す必要あり
-DROP DATABASE IF EXISTS `test`;
-DELETE FROM mysql.user WHERE user='test';
-FLUSH PRIVILEGES;
-CREATE DATABASE `test` DEFAULT CHARACTER SET utf8 ;
-GRANT ALL ON `test`.* to 'test'@mysql identified by 'test';
 FLUSH PRIVILEGES;
 
+# create database
+DROP DATABASE IF EXISTS `test`;
+CREATE DATABASE `test` DEFAULT CHARACTER SET utf8;
+
+# create user
+DROP USER IF EXISTS test;
+CREATE USER 'test' IDENTIFIED BY 'test';
+
+# grant permmission
+GRANT ALL ON `test`.* to 'test'@'%' identified by 'test';
+
+FLUSH PRIVILEGES;
+
+# use test
+USE `test`;
 
 ###ここから下は動作確認済
-### USER
-DROP TABLE IF EXISTS USER;
-CREATE TABLE USER (
+### user
+DROP TABLE IF EXISTS user;
+CREATE TABLE user (
 		ID				INT AUTO_INCREMENT
 	,	NAME	    VARCHAR(20)
 	,	SEX			VARCHAR(5)

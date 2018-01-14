@@ -1,1 +1,1 @@
-FROM kentakozuka/dev-tools:latest
+FROM kentakozuka/dev-tools
