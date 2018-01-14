@@ -18,7 +18,6 @@ FLUSH PRIVILEGES;
 # use test
 USE `test`;
 
-###ここから下は動作確認済
 ### user
 DROP TABLE IF EXISTS user;
 CREATE TABLE user (
