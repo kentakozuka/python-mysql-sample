@@ -4,6 +4,11 @@
 type shell comands to execute.
 
 ```
+. ./setup.sh
+```
+with your su password
+
+```
 . ./compose_up.sh
 ```
 
@@ -14,6 +19,7 @@ type shell comands to execute.
 ```
 . ./exec_sql.sh
 ```
+with password 'root' which is  mysql root password
 
 ```
 python3.6 sample_db.py
